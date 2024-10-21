@@ -3,8 +3,7 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 import torchmetrics
-
-from .model_utils import RMSEMetric, R2Score
+from model_utils import RMSEMetric, R2Score
 
 
 class BaseRegressor(pl.LightningModule):

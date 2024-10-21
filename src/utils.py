@@ -5,7 +5,7 @@ import joblib
 import torch
 import numpy as np
 from sklearn.ensemble import RandomForestRegressor
-from . import Models
+import Models
 
 
 def load_global_variables() -> dict:
@@ -13,7 +13,7 @@ def load_global_variables() -> dict:
     Load global variables from a json file.
     """
 
-    dict_path = "./global_variables.json"
+    dict_path = "./src/global_variables.json"
     with open(dict_path, "r") as file:
         global_variables = json.load(file)
     return global_variables
@@ -92,9 +92,9 @@ def load_rf_model(
     subset: str = "all", include_industry: bool = True, return_model_path: bool = False
 ):
     if include_industry:
-        best_model_file = "./models/regression_models/RF/multi_dimension_all/241016_model_with_insdustry.pkl"
+        best_model_file = "./src/models/regression_models/RF/multi_dimension_all/241016_model_with_insdustry.pkl"
     else:
-        best_model_file = "./models/regression_models/RF/multi_dimension_all/241016_model_no_industry.pkl"
+        best_model_file = "./src/models/regression_models/RF/multi_dimension_all/241016_model_no_industry.pkl"
 
     model = joblib.load(best_model_file)
 

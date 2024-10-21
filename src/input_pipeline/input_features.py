@@ -102,10 +102,10 @@ def load_timbre_models():
     Load the timbre feature models.
     PCA, Scaler and GMM for clusters and LDA for topics.
     """
-    timbre_pca = joblib.load("./models/input_feature_models/timbre_pca.pkl")
-    timbre_scaler = joblib.load("./models/input_feature_models/timbre_scaler.pkl")
-    timbre_gmm = joblib.load("./models/input_feature_models/timbre_gmm_best_est.pkl")
-    timbre_lda = joblib.load("./models/input_feature_models/timbre_lda_best_est.pkl")
+    timbre_pca = joblib.load("./src/models/input_feature_models/timbre_pca.pkl")
+    timbre_scaler = joblib.load("./src/models/input_feature_models/timbre_scaler.pkl")
+    timbre_gmm = joblib.load("./src/models/input_feature_models/timbre_gmm_best_est.pkl")
+    timbre_lda = joblib.load("./src/models/input_feature_models/timbre_lda_best_est.pkl")
     return timbre_pca, timbre_scaler, timbre_gmm, timbre_lda
 
 
@@ -213,7 +213,7 @@ def load_chroma_model():
     Load the chroma feature models.
     LDA for topics.
     """
-    chroma_lda = joblib.load("./models/input_feature_models/chroma_lda_best_est.pkl")
+    chroma_lda = joblib.load("./src/models/input_feature_models/chroma_lda_best_est.pkl")
     return chroma_lda
 
 
@@ -272,10 +272,10 @@ def load_loudnes_models():
     GMM for clusters and LDA for topics.
     """
     loudness_gmm = joblib.load(
-        "./models/input_feature_models/loudness_gmm_best_est.pkl"
+        "./src/models/input_feature_models/loudness_gmm_best_est.pkl"
     )
     loudness_lda = joblib.load(
-        "./models/input_feature_models/loudness_lda_best_est.pkl"
+        "./src/models/input_feature_models/loudness_lda_best_est.pkl"
     )
     return loudness_gmm, loudness_lda
 
