@@ -68,8 +68,7 @@ def predict_sound(sound_file, industry=None):
     return result
 
 
-if __name__ == "__main__":
-
+def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--industry", type=str, default=None)
     parser.add_argument(
@@ -81,3 +80,7 @@ if __name__ == "__main__":
     # load resources and models
     result = predict_sound(args.sound_file, args.industry)
     print(result)
+
+
+if __name__ == "__main__":
+    main()

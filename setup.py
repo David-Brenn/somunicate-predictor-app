@@ -26,7 +26,6 @@ setup(
         "joblib==1.4.0",
         "scikit-learn==1.4.2",
         "mosqito==1.2.1",
-        "streamlit==1.33.0",
         "torch==2.2.2",
         "torchmetrics==1.3.2",
         "pytorch_lightning==2.2.2",
